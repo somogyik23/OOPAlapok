@@ -1,0 +1,7 @@
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.exe.config
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.exe
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\bin\Debug\OOPAlapok.pdb
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.csproj.AssemblyReference.cache
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.csproj.CoreCompileInputs.cache
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.exe
+C:\Users\SomogyiK\source\repos\OOPAlapok\OOPAlapok\obj\Debug\OOPAlapok.pdb
