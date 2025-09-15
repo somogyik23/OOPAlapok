@@ -86,9 +86,16 @@ namespace OOPAlapok
         public string NeptunKod
         {
             get { return neptunKod; }
-            set { neptunKod = value; }
+            set
+            {
+                if (value.Length > 6)
+                    throw new ArgumentException("A Neptun kód nem lehet hosszabb 6 karakternél.");
+                neptunKod = value;
+            }
         }
     }
+
+
 
 
 
