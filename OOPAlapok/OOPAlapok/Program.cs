@@ -96,6 +96,24 @@ namespace OOPAlapok
 
     }
 
+    public class Dolgozo : Szemely
+    {
+        public int Ber { get; set; }
+
+        public Dolgozo(string nev, int kor, int ber)
+            : base(nev, kor)
+        {
+            Ber = ber;
+        }
+
+        public override string ToString()
+        {
+            return $"Dolgozó - Név: {Nev}, Életkor: {Kor}, Bér: {Ber}";
+        }
+
+
+    }
+
 
 
     internal class Program
@@ -116,6 +134,18 @@ namespace OOPAlapok
             {
                 Console.WriteLine(h.Nev);
             }
+
+            List<Szemely> szemelyek = new List<Szemely>
+            {
+            new Hallgato("Anna", 20, "ABC123"),
+            new Dolgozo("János", 35, 350000)
+            };
+
+            foreach (var s in szemelyek)
+            {
+                Console.WriteLine(s.ToString());
+            }
+
         }
     }
 }
