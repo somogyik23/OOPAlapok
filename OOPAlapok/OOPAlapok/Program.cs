@@ -93,10 +93,8 @@ namespace OOPAlapok
                 neptunKod = value;
             }
         }
+
     }
-
-
-
 
 
 
@@ -106,7 +104,18 @@ namespace OOPAlapok
         {
             Szemely person = new Szemely("Ibolya", 22);
             Console.WriteLine($"A személy neve: {person.Nev} és életkora: {person.Kor}");
+
+            List<Hallgato> hallgatok = new List<Hallgato>
+            {
+                new Hallgato("Anna", 20, "ABC123"),
+                new Hallgato("Béla", 21, "DEF456"),
+                new Hallgato("Csaba", 22, "GHI789")
+            };
+
+            foreach (var h in hallgatok)
+            {
+                Console.WriteLine(h.Nev);
+            }
         }
     }
-
 }
