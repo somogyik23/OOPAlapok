@@ -39,10 +39,44 @@ namespace OOPAlapok
         {
             return $"Név: {Nev}, Életkor: {Kor}";
         }
-    } 
+    }
 
+    public class BankSzamla
+    {
+        private int egyenleg;
 
+        public int Egyenleg
+        {
+            get { return egyenleg; }
+            private set
+            {
+                if (value < 0)
+                    throw new ArgumentException("Az egyenleg nem lehet negatív.");
+                egyenleg = value;
+            }
+        }
 
+        public BankSzamla(int kezdoEgyenleg = 0)
+        {
+            Egyenleg = kezdoEgyenleg;
+        }
+
+        public void Betesz(int osszeg)
+        {
+            if (osszeg < 0)
+                throw new ArgumentException("Negatív összeget nem lehet betenni.");
+            Egyenleg += osszeg;
+        }
+
+        public void Kivesz(int osszeg)
+        {
+            if (osszeg < 0)
+                throw new ArgumentException("Negatív összeget nem lehet kivenni.");
+            if (Egyenleg - osszeg < 0)
+                throw new ArgumentException("Nincs elég egyenleg.");
+            Egyenleg -= osszeg;
+        }
+    }
 
 
     internal class Program
