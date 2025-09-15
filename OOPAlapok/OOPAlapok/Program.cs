@@ -8,32 +8,46 @@ namespace OOPAlapok
 {
     public class Szemely
     {
-        
-        
-        public string nev = "István";
-        public int kor = 22;
+        private string nev;
+        private int kor;
 
-        public Szemely(string Nev, int Kor) 
+        public Szemely(string nev, int kor)
         {
-            this.nev = Nev;
-            this.kor = Kor;
+            this.nev = nev;
+            this.kor = kor;
         }
 
-
-        public string Kiir()
+        public string Nev
         {
-            return $"A személy neve {nev} és életkor: {kor}";
+            get { return nev; }
+            set { nev = value; }
         }
-    }
-    
 
+        public int Kor
+        {
+            get { return kor; }
+
+            set
+            {
+                if (value >= 0)
+                {
+                    kor = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Az életkor nem lehet negatív.");
+                }
+            }
+        } // <-- Missing closing brace added here
+
+    } // <-- Closing brace for the Szemely class
 
     internal class Program
     {
         static void Main(string[] args)
         {
-            Szemely person = new Szemely("Ibolya",25);
-            Console.WriteLine($"A személy neve:  { person.nev} és életkora: {person.kor}");
+            Szemely person = new Szemely("Ibolya", 22);
+            Console.WriteLine($"A személy neve: {person.Nev} és életkora: {person.Kor}");
         }
     }
 }
