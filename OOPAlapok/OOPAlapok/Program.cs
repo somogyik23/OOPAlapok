@@ -14,7 +14,7 @@ namespace OOPAlapok
         public Szemely(string nev, int kor)
         {
             this.nev = nev;
-            this.kor = kor;
+            Kor = kor;
         }
 
         public string Nev
@@ -26,21 +26,24 @@ namespace OOPAlapok
         public int Kor
         {
             get { return kor; }
-
             set
             {
                 if (value >= 0)
-                {
                     kor = value;
-                }
                 else
-                {
                     throw new ArgumentException("Az életkor nem lehet negatív.");
-                }
             }
-        } // <-- Missing closing brace added here
+        }
 
-    } // <-- Closing brace for the Szemely class
+        public override string ToString()
+        {
+            return $"Név: {Nev}, Életkor: {Kor}";
+        }
+    } 
+
+
+
+
 
     internal class Program
     {
@@ -50,4 +53,5 @@ namespace OOPAlapok
             Console.WriteLine($"A személy neve: {person.Nev} és életkora: {person.Kor}");
         }
     }
+
 }
