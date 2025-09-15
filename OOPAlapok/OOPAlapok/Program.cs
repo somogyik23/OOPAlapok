@@ -8,7 +8,7 @@ namespace OOPAlapok
 {
     public class Szemely
     {
-        private string nev;
+        protected string nev;
         private int kor;
 
         public Szemely(string nev, int kor)
@@ -33,11 +33,6 @@ namespace OOPAlapok
                 else
                     throw new ArgumentException("Az életkor nem lehet negatív.");
             }
-        }
-
-        public override string ToString()
-        {
-            return $"Név: {Nev}, Életkor: {Kor}";
         }
     }
 
@@ -94,6 +89,8 @@ namespace OOPAlapok
             set { neptunKod = value; }
         }
     }
+
+
 
 
     internal class Program
