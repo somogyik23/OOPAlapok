@@ -78,6 +78,23 @@ namespace OOPAlapok
         }
     }
 
+    public class Hallgato : Szemely
+    {
+        private string neptunKod;
+
+        public Hallgato(string nev, int kor, string neptunKod)
+            : base(nev, kor)
+        {
+            NeptunKod = neptunKod;
+        }
+
+        public string NeptunKod
+        {
+            get { return neptunKod; }
+            set { neptunKod = value; }
+        }
+    }
+
 
     internal class Program
     {
